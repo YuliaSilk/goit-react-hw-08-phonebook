@@ -27,7 +27,7 @@ const FormSchema = Yup.object().shape({
      <Formik
         initialValues={{
           name: '',
-          phone: '',
+          number: '',
         }}
         validationSchema={FormSchema}
         onSubmit={(values, actions) => {
@@ -37,7 +37,7 @@ const FormSchema = Yup.object().shape({
             dispatch(addContact({
               id: '',
               name: values.name.trim(),
-              phone: values.phone.trim(),
+              number: values.number.trim(),
             }))
           };
           Notiflix.Notify.success('The contact succefully added!');
@@ -54,8 +54,8 @@ const FormSchema = Yup.object().shape({
           <ErrMsg component="div" name="name" />
         </FormName>
         <FormName>Phone number
-          <FormField name="phone" placeholder="Enter phone number" type="tel"/>
-          <ErrMsg component="div" name="phone" />
+          <FormField name="number" placeholder="Enter phone number" type="tel"/>
+          <ErrMsg component="div" name="number" />
         </FormName>
 
         <AddBtn type="submit">Add contact</AddBtn>
