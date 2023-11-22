@@ -13,7 +13,7 @@ const FormSchema = Yup.object().shape({
     .max(15, 'Too long contacts name!')
     .required('Required'),
 
-    phone: Yup.string()
+    number: Yup.string()
     .matches(/^\+?\d{1,4}([ ./-]?\d{1,3})?([ ./-]?\d{1,4})+$/, 'Invalid phone number format')
     .required('Required'),
   });

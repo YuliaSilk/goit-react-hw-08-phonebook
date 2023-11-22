@@ -6,6 +6,7 @@ import { GlobalStyle } from 'components/GlobalStyle';
 import { Provider } from 'react-redux';
 import { persistor, store } from 'redux/store';
 import { PersistGate } from 'redux-persist/integration/react'
+import { BrowserRouter } from 'react-router-dom';
 
 
 const theme = {
@@ -29,13 +30,15 @@ spacing: value => `${value * 4}px`,
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+     <ThemeProvider theme={theme}>
     <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-    <ThemeProvider theme={theme}>
+   <BrowserRouter basename='goit-react-hw-08-phonebook'>
     <App />
-    </ThemeProvider>
+    </BrowserRouter>
     </PersistGate>
     </Provider>
     <GlobalStyle/>
+    </ThemeProvider>
   </React.StrictMode>
 );

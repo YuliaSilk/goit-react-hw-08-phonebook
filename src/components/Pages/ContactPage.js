@@ -9,6 +9,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchContacts } from "redux/operations";
 import { selectIsLoading } from "redux/selectors";
 import { selectContacts } from "redux/selectors";
+// import { FormTittle } from "components/ContactsForm/ContactsForm.styled";
+
 
 export default function Contacts() {
     const dispatch = useDispatch();
@@ -30,12 +32,11 @@ export default function Contacts() {
         <ContactForm />
         <ContactsContainer>
         <ContactHeaderStyle>Contacts</ContactHeaderStyle>
-        <div>{isLoading && 'Request in progress...'}</div>
+        {isLoading && 'Request in progress...'}
         <Filter />
-        {contacts.length > 0 && (  <ContactList />)}
+        {contacts.length > 0 && (<ContactList />)}
         </ContactsContainer>
         </PhonebookContainer>
     )
 }
-
 

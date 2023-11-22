@@ -2,7 +2,6 @@ import { useDispatch } from "react-redux";
 import { ContactItem, DeleteBtn } from "./Contacts.styled"
 import { deleteContact } from "redux/operations";
 
-
 export const Contact = ({ contact: { id, name, phone } }) => {
     const dispatch = useDispatch();
     const toDeleteContact = contactId => {

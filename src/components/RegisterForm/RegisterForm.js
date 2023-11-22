@@ -1,36 +1,40 @@
 import { useDispatch } from "react-redux";
 import { register } from "redux/auth/operations";
+import { FormLabel, RegisterBtn, FormContainer, RegisterFormField, RegisterFormContainer } from "./RegisterForm.styled";
 
 export const RegisterForm = () => {
     const dispatch = useDispatch();
 
     const handleSubmit = e => {
-        e.preverentdefault();
-        const form = e.currentTarget;
+        e.preventDefault();
+        const { name, email, password } = e.currentTarget.elements;
         dispatch(register({
-            name: form.elements.name.value,
-            email: form.elements.email.value,
-            password: form.element.password.value,
+            name: name.value,
+            email: email.value,
+            password: password.value,
         }));
-        form.reset();
+        // form.reset();
     };
     return (
-        <form onSubmit={handleSubmit} autoComplete="off">
-            <label>
+        <RegisterFormContainer>
+        <FormContainer onSubmit={handleSubmit}>
+            <FormLabel>
                 Username
-                <input type="text" name="name" />
-            </label>
-            <label>
+                <RegisterFormField type="text" name="name" autocomplete="given-name"/>
+            </FormLabel>
+            <FormLabel>
                 Email
-                <input type="email" name="email" />
-            </label>
-            <label>
+                <RegisterFormField type="email" name="email" autocomplete="off" />
+            </FormLabel>
+            <FormLabel>
                 Password
-                <input type="password" name="password" />
-            </label>
-            <button type="submit">
+                <RegisterFormField type="password" name="password" autocomplete="off" />
+            </FormLabel>
+            <RegisterBtn type="submit">
                 Register
-                </button>
-        </form>
+                </RegisterBtn>
+        </FormContainer>
+        </RegisterFormContainer>
+     
     );
 };
