@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const RegisterFormContainer = styled.div`
 width: 400px;
-/* background-color: red; */
 `
 export const FormContainer = styled.form`
 width: 400px;
@@ -75,15 +74,6 @@ export const RegisterBtn = styled.button`
 }
 `;
 
-
-
-
-// export const ErrMsg = styled(ErrorMessage)`
-// color: ${({ theme }) => theme.colors.error};
-// font-size: 16px;
-// margin-top: 4px;
-// width: auto;
-// `;
 
 
 

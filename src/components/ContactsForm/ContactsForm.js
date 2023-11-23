@@ -23,6 +23,9 @@ const FormSchema = Yup.object().shape({
     const dispatch = useDispatch();
     const contacts = useSelector(selectContacts);
 
+    
+
+
     return (
      <Formik
         initialValues={{
@@ -38,12 +41,12 @@ const FormSchema = Yup.object().shape({
               id: '',
               name: values.name.trim(),
               number: values.number.trim(),
-            }))
-          };
-          Notiflix.Notify.success('The contact succefully added!');
-          actions.resetForm()
-          
+            }));
+            Notiflix.Notify.success('The contact succefully added!');
+            actions.resetForm();
+          }
         }}
+        
       >
         <FormStyle>
       

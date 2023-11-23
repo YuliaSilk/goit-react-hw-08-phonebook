@@ -1,9 +1,3 @@
-// import { ContactForm } from "./ContactsForm/ContactsForm";
-// import { Filter } from "./Filter/Filter";
-// import { ContactList } from "./ContactsList/ContactsList";
-// import { ContactHeaderStyle, ContactsContainer, PhonebookContainer } from "./Contacts/Contacts.styled";
-// import { FormTittle } from "./ContactsForm/ContactsForm.styled";
-// import { selectContacts } from "redux/selectors";
 import { useDispatch } from "react-redux";
 import { lazy, useEffect } from "react";
 import { fetchContacts } from "redux/operations";
@@ -50,26 +44,6 @@ export const App = () => {
   );
 };
 
-// export const App = () => {
-//   // const contacts = useSelector(selectContacts);
-//   const { isRefreshing } = useAuth();
-//   const dispatch = useDispatch();
-// useEffect(() => {
-//   dispatch(fetchContacts())
-// }, [dispatch])
-
-
-
-
- // <PhonebookContainer>
-    //   <FormTittle>Phonebook</FormTittle>
-    //   <ContactForm />
-    //   <ContactsContainer>
-    //   <ContactHeaderStyle>Contacts</ContactHeaderStyle>
-    //   <Filter />
-    //   {contacts.length > 0 && (  <ContactList />)}
-    //   </ContactsContainer>
-    // </PhonebookContainer>
 
 
 

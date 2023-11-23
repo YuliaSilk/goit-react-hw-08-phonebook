@@ -35,7 +35,7 @@ width: 100px;
 `;
 
 export const ContactHeaderStyle = styled.h2`
-font-size: 42px;
+font-size: 32px;
 font-weight: 200;
 margin: 0;
 margin-top: 16px;
@@ -47,12 +47,12 @@ display: flex;
 max-width: 600px;
 flex-direction: column;
 gap: 8px;
-/* margin: 0 auto; */
 `;
 
 export const PhonebookContainer = styled.div`
 width: 500px;
 padding: 20px;
 background-color: ${({ theme }) => theme.colors.backgraund};
-border-radius: 15px;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
 `;
