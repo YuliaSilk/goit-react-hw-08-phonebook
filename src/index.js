@@ -19,6 +19,7 @@ const theme = {
     text:'#ECF39E',
     border: '#90A955',
     inputColor: '#31572C',
+    registerBackg: '#f2fbec',
   },
 
   radii: {
