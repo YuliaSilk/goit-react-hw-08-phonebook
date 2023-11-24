@@ -2,15 +2,22 @@ import styled from "styled-components";
 
 export const RegisterFormContainer = styled.div`
 width: 400px;
+position: relative;
 `
 export const FormContainer = styled.form`
+position: absolute;
+top: 0;
+left: 100%;
 width: 400px;
 display: flex;
 flex-direction: column;
 padding: 12px;
 margin-bottom: 12px;
 gap: 10px;
-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+background-color: ${({ theme }) => theme.colors.registerBackg};
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 `
 
 export const FormLabel = styled.label`
