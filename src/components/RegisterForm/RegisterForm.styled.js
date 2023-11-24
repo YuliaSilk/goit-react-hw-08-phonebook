@@ -14,9 +14,6 @@ flex-direction: column;
 padding: 12px;
 margin-bottom: 12px;
 gap: 10px;
-background-color: ${({ theme }) => theme.colors.registerBackg};
-border-bottom-left-radius: 15px;
-border-bottom-right-radius: 15px;
 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 `
 
@@ -29,7 +26,7 @@ align-items: center;
 font-size: 18px;
 font-weight: 600;
 gap: 8px;
-color: ${({ theme }) => theme.colors.main};
+color: ${({ theme }) => theme.colors.acent};
 `;
 
 export const RegisterFormField = styled.input`
@@ -55,7 +52,7 @@ export const RegisterBtn = styled.button`
     width: 150px;
     font-size: 16px;
     font-weight: 600;
-    color: ${({ theme }) => theme.colors.main};
+    color: ${({ theme }) => theme.colors.acent};
     cursor: pointer;
    
     height: 40px;

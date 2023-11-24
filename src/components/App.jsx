@@ -1,11 +1,11 @@
 import { useDispatch } from "react-redux";
 import { lazy, useEffect } from "react";
-import { fetchContacts } from "redux/operations";
 import { useAuth } from "./hooks";
 import { Route, Routes } from "react-router-dom";
 import { Layout } from "./Layout";
 import { RestrictedRoute } from "./RestrictedRoute";
 import { PrivateRoute } from "./PrivateRoute";
+import { refreshUser } from "redux/auth/operations";
 
 const HomePage = lazy(() => import('./Pages/HomePage'));
 const RegisterPage = lazy(() => import('./Pages/RegisterPage'));
@@ -18,7 +18,7 @@ export const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(refreshUser());
   }, [dispatch]);
 
   return isRefreshing ? (
