@@ -5,12 +5,12 @@ import { Toaster } from "react-hot-toast"
 
 export const Layout = () => {
     return (
-        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px' }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 16px' }}>
             <AppBar />
             <Suspense fallback={'Loading page...'}>
                 <Outlet />
             </Suspense>
-            <Toaster position="top-left" />
+            <Toaster position="top-right" />
         </div>
     );
 };
