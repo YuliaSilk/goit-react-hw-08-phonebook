@@ -7,12 +7,12 @@ export const LoginForm = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        const form = e.currentTarget;
+        const { email, password} = e.currentTarget;
         dispatch(logIn({
-            email: form.elements.email.value,
-            password: form.elements.password.value,
+            email: email.value,
+            password: password.value,
         }));
-        form.reset();
+        // form.reset();
     }
     return (
         <FormContainer onSubmit={handleSubmit} >
